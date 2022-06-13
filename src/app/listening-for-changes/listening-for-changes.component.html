@@ -1,0 +1,58 @@
+<form [formGroup]="permanentRangeCategoryForm">
+  <label for="rangeCategory" class="label-text">Range Category:</label>
+  <input
+    type="text"
+    autocomplete="off"
+    name="rangeCategory"
+    id="rangeCategory"
+    formControlName="rangeCategory"
+  />
+  <br />
+  <label for="rangeType" class="label-text">Range Type:</label>
+  <input
+    type="text"
+    autocomplete="off"
+    name="rangeType"
+    id="rangeType"
+    formControlName="rangeType"
+  />
+  <br />
+  <label for="rangeSubType" class="label-text">Range Sub-Type:</label>
+  <input
+    type="text"
+    autocomplete="off"
+    name="rangeSubType"
+    id="rangeSubType"
+    formControlName="rangeSubType"
+  />
+  <br />
+  <button
+    type="button"
+    (click)="savePermanentRangeCategory()"
+    id="savePermanentRangeCategory"
+    class="btn btn-sm btn-rectangle btn-default text-case customButton"
+  >
+    {{ editEnable ? 'Update' : 'Save' }}
+  </button>
+</form>
+
+<p>{{ text }}</p>
+<p>{{ originalValue }}</p>
+
+<button
+  type="button"
+  (click)="editButton()"
+  id="editButton"
+  class="btn btn-sm btn-rectangle btn-default text-case customButton"
+>
+  Edit
+</button>
+
+<button
+  type="button"
+  (click)="resetPermamentRangeCategory()"
+  id="editButton"
+  class="btn btn-sm btn-rectangle btn-default text-case customButton"
+>
+  Reset
+</button>
